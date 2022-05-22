@@ -1,0 +1,11 @@
+#!/bin/sh
+
+a=a2
+A=$(echo "$a" | tr '[:lower:]' '[:upper:]')
+
+if wget "https://www.utsc.utoronto.ca/~nick/cscb36/$a.pdf" -O /dev/null; then
+    echo $A FOUND!
+    exit 1
+else
+    echo $A still not found
+fi
