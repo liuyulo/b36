@@ -2,13 +2,13 @@ name: Assert
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
       - name: Assert not found
-        run: sh ./assert
+        run: sh ./assert ${{ secrets.ASSIGNMENT }}
