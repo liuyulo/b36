@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Assert not found
-        run: sudo ./assert
+        run: sh ./assert
