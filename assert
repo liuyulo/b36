@@ -1,7 +1,7 @@
 #!/bin/sh
 
-a=a2
-A=$(echo "$a" | tr '[:lower:]' '[:upper:]')
+a=$(echo "$1" | tr '[:upper:]' '[:lower:]')
+A=$(echo "$1" | tr '[:lower:]' '[:upper:]')
 
 if wget "https://www.utsc.utoronto.ca/~nick/cscb36/$a.pdf" -O /dev/null; then
     echo $A FOUND!
